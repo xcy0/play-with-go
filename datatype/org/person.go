@@ -1,7 +1,11 @@
 package org
 
-type IDInf interfac
-ye Person struct {
+type IDInf interface {
+	ID() string
+}
 
-func (p Person) ID()string {
-}eturn "12345"
+type Person struct {
+
+func (p Person) ID() string {
+	return "12345"
+}
