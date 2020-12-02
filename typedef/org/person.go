@@ -6,7 +6,12 @@ type IDInf interface {
 }
 
 // TwitterHandler type
-type TwitterHandler = string
+type TwitterHandler string
+
+// Redirect to twitter
+func (th TwitterHandler) Redirect() string {
+	return ""
+}
 
 // Person struct
 type Person struct {
