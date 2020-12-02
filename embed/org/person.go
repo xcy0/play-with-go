@@ -59,6 +59,7 @@ func NewPerson(newFirstName string, newLastName string) Person {
 			first: newFirstName,
 			last:  newLastName,
 		},
+		"",
 	}
 }
 
