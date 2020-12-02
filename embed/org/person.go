@@ -32,12 +32,12 @@ func (n *Name) FullName() string {
 
 // Employee struct
 type Employee struct {
-	name Name
+	Name
 }
 
 // Person struct
 type Person struct {
-	name    Name
+	Name
 	twitter TwitterHandler
 }
 
@@ -55,7 +55,7 @@ func (p *Person) GetTwitter() TwitterHandler {
 // NewPerson constructor
 func NewPerson(newFirstName string, newLastName string) Person {
 	return Person{
-		name: Name{
+		Name{
 			first: newFirstName,
 			last:  newLastName,
 		},
