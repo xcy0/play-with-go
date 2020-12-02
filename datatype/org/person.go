@@ -5,6 +5,7 @@ type IDInf interface {
 }
 
 type Person struct {
+}
 
 func (p Person) ID() string {
 	return "12345"
