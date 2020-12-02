@@ -8,14 +8,26 @@ type IDInf interface {
 // Person struct
 type Person struct {
 	firstName string
-	lastName string
+	lastName  string
+	twitter   string
 }
 
-// NewPerson constructor 
+// SetTwitter setter
+func (p *Person) SetTwitter(newTwitter string) error {
+	p.twitter = newTwitter
+	return nil
+}
+
+// GetTwitter getter
+func (p *Person) GetTwitter() string {
+	return p.twitter
+}
+
+// NewPerson constructor
 func NewPerson(newFirstName string, newLastName string) Person {
-	return Person{ 
-		firstName: newFirstName, 
-		lastName: newLastName,
+	return Person{
+		firstName: newFirstName,
+		lastName:  newLastName,
 	}
 }
 

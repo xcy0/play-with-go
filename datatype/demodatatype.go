@@ -10,6 +10,9 @@ func main() {
 	fmt.Println(p.ID())
 	fmt.Println(p)
 
+	p.SetTwitter("@james")
+	fmt.Println(p)
+
 	var p2 org.IDInf = p
 	fmt.Println(p2.ID())
 
