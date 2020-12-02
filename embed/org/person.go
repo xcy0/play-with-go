@@ -19,11 +19,26 @@ func (th TwitterHandler) Redirect() string {
 	return fmt.Sprintf("http://www.twitter.com/%s", cleanHandler)
 }
 
+// Name struct
+type Name struct {
+	first string
+	last  string
+}
+
+// FullName return first, last
+func (n *Name) FullName() string {
+	return fmt.Sprintf("%s %s", strings.Title(n.first), strings.Title(n.last))
+}
+
+// Employee struct
+type Employee struct {
+	name Name
+}
+
 // Person struct
 type Person struct {
-	firstName string
-	lastName  string
-	twitter   TwitterHandler
+	name    Name
+	twitter TwitterHandler
 }
 
 // SetTwitter setter
@@ -40,8 +55,10 @@ func (p *Person) GetTwitter() TwitterHandler {
 // NewPerson constructor
 func NewPerson(newFirstName string, newLastName string) Person {
 	return Person{
-		firstName: newFirstName,
-		lastName:  newLastName,
+		name: Name{
+			first: newFirstName,
+			last:  newLastName,
+		},
 	}
 }
 
