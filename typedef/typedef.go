@@ -13,4 +13,6 @@ func main() {
 	p.SetTwitter("@james")
 	fmt.Println(p)
 
+	fmt.Printf("type of twitterhandler is %T\n", org.TwitterHandler("test"))
+
 }

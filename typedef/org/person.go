@@ -6,7 +6,7 @@ type IDInf interface {
 }
 
 // TwitterHandler type
-type TwitterHandler string
+type TwitterHandler = string
 
 // Person struct
 type Person struct {
