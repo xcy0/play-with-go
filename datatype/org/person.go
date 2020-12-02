@@ -5,8 +5,15 @@ type IDInf interface {
 }
 
 type Person struct {
-	FirstName string
-	LastName string
+	firstName string
+	lastName string
+}
+
+func NewPerson(newFirstName string, newLastName string) Person {
+	return Person{ 
+		firstName: newFirstName, 
+		lastName: newLastName,
+	}
 }
 
 

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	p := org.Person{FirstName:"James", LastName:"Bond"}
+	p := org.NewPerson("James", "Bond")
 	fmt.Println(p.ID())
 	fmt.Println(p)
 
