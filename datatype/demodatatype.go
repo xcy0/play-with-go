@@ -1,8 +1,8 @@
 package main
 
 import (
-	"play-with-go/datatype/org"
 	"fmt"
+	"play-with-go/datatype/org"
 )
 
 func main() {
