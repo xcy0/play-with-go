@@ -1,5 +1,10 @@
 package org
 
+import (
+	"fmt"
+	"strings"
+)
+
 // IDInf is interface
 type IDInf interface {
 	ID() string
@@ -10,7 +15,8 @@ type TwitterHandler string
 
 // Redirect to twitter
 func (th TwitterHandler) Redirect() string {
-	return ""
+	cleanHandler := strings.Trim(string(th), "@")
+	return fmt.Sprintf("http://www.twitter.com/%s", cleanHandler)
 }
 
 // Person struct
