@@ -6,10 +6,11 @@ import (
 )
 
 func main() {
-	p := org.Person{}
+	p := org.Person{FirstName:"James", LastName:"Bond"}
 	fmt.Println(p.ID())
+	fmt.Println(p)
 
-	var p2 org.IDInf = org.Person{}
+	var p2 org.IDInf = p
 	fmt.Println(p2.ID())
 
 }
