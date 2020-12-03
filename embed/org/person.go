@@ -10,6 +10,14 @@ type IDInf interface {
 	ID() string
 }
 
+// SocialSecurityNumber string
+type SocialSecurityNumber string
+
+// ID of SSN
+func (ssn SocialSecurityNumber) ID() string {
+	return "23456"
+}
+
 // TwitterHandler type
 type TwitterHandler string
 
