@@ -25,6 +25,12 @@ func main() {
 		fmt.Println("equal")
 	}
 
+	ssn1 := org.NewSocialSecurityNumber("111-222-333-444")
+	ssn2 := org.NewSocialSecurityNumber("111-222-333-444")
+
+	if ssn1 == ssn2 {
+		fmt.Println("SSN match")
+	}
 }
 
 // Name struct
