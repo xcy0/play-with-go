@@ -78,7 +78,9 @@ func NewPerson(newFirstName string, newLastName string, idInterface IDInf) Perso
 	}
 }
 
+/*
 // ID Person implements IDInf
 func (p Person) ID() string {
 	return p.IDInf.ID()
 }
+*/
