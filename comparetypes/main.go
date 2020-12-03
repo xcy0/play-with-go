@@ -17,4 +17,22 @@ func main() {
 	fmt.Println(p.GetTwitter().Redirect())
 
 	fmt.Printf("type of twitterhandler is %T\n", org.TwitterHandler("test"))
+
+	name1 := Name{First: "f", Last: "S"}
+	name2 := Name{First: "f", Last: "S"}
+
+	if name1 == name2 {
+		fmt.Println("equal")
+	}
+
 }
+
+// Name struct
+type Name struct {
+	First string
+	Last  string
+	// Middle []string
+}
+
+// OtherName struct
+type OtherName = Name
