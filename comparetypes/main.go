@@ -25,6 +25,12 @@ func main() {
 		fmt.Println("equal")
 	}
 
+	if name1 == (Name{}) {
+		fmt.Println("name1 is empty")
+	} else {
+		fmt.Println("name is NOT empty")
+	}
+
 	ssn1 := org.NewSocialSecurityNumber("111-222-333-444")
 	ssn2 := org.NewSocialSecurityNumber("111-222-333-444")
 
@@ -37,7 +43,6 @@ func main() {
 type Name struct {
 	First string
 	Last  string
-	// Middle []string
 }
 
 // OtherName struct
