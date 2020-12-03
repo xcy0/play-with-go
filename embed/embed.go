@@ -7,7 +7,8 @@ import (
 
 func main() {
 
-	p := org.NewPerson("James", "Bond")
+	idInterface := org.NewSocialSecurityNumber("111-222-333-444")
+	p := org.NewPerson("James", "Bond", idInterface)
 	fmt.Println(p.ID())
 	fmt.Println(p)
 

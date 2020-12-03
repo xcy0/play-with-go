@@ -10,12 +10,17 @@ type IDInf interface {
 	ID() string
 }
 
-// SocialSecurityNumber string
-type SocialSecurityNumber string
+// socialSecurityNumber string
+type socialSecurityNumber string
+
+// NewSocialSecurityNumber constructor
+func NewSocialSecurityNumber(id string) IDInf {
+	return socialSecurityNumber(id)
+}
 
 // ID of SSN
-func (ssn SocialSecurityNumber) ID() string {
-	return "23456"
+func (ssn socialSecurityNumber) ID() string {
+	return string(ssn)
 }
 
 // TwitterHandler type
@@ -47,6 +52,7 @@ type Employee struct {
 type Person struct {
 	Name
 	twitter TwitterHandler
+	IDInf
 }
 
 // SetTwitter setter
@@ -61,17 +67,18 @@ func (p *Person) GetTwitter() TwitterHandler {
 }
 
 // NewPerson constructor
-func NewPerson(newFirstName string, newLastName string) Person {
+func NewPerson(newFirstName string, newLastName string, idInterface IDInf) Person {
 	return Person{
 		Name{
 			first: newFirstName,
 			last:  newLastName,
 		},
 		"",
+		idInterface,
 	}
 }
 
 // ID Person implements IDInf
 func (p Person) ID() string {
-	return "12345"
+	return p.IDInf.ID()
 }
