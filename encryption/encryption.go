@@ -23,7 +23,7 @@ func main() {
 		case msg := <-tower1Channel:
 			fmt.Printf("\nMessage from tower1 - %v\n", msg)
 		case msg := <-tower2Channel:
-			fmt.Printf("\nMessage from tower1 - %v\n", msg)
+			fmt.Printf("\nMessage from tower2 - %v\n", msg)
 		}
 	}
 }
